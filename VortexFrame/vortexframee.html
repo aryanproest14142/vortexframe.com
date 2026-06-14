@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VortexFrame | Smart Affiliate Deals</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#0b1020;
+    color:white;
+    overflow-x:hidden;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:bold;
+    background:linear-gradient(90deg,#00d4ff,#8a2be2);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00d4ff;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 20px;
+    background:
+    radial-gradient(circle at top,#182848,#0b1020);
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:#00d4ff;
+}
+
+.hero-content p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.2rem;
+    opacity:0.9;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:linear-gradient(90deg,#00d4ff,#8a2be2);
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+.products{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#141b34;
+    padding:25px;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 30px rgba(0,212,255,.25);
+}
+
+.card img{
+    width:100%;
+    border-radius:15px;
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+.card button{
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#00d4ff;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.testimonials{
+    padding:80px 8%;
+    background:#11172b;
+}
+
+.testimonial{
+    background:#18213f;
+    padding:25px;
+    border-radius:15px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#070b16;
+}
+
+.glow{
+    animation:glow 3s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #00d4ff;
+    }
+    to{
+        text-shadow:0 0 25px #8a2be2;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">VortexFrame</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#reviews">Reviews</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-content">
+<h1 class="glow">Discover The Best <span>Affiliate Deals</span></h1>
+<p>
+VortexFrame helps you find trending products, exclusive discounts,
+and trusted recommendations from top brands worldwide.
+</p>
+
+<a href="#products" class="btn">Explore Products</a>
+</div>
+</section>
+
+<section class="products" id="products">
+<h2 class="section-title">Featured Products</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://via.placeholder.com/400x250" alt="">
+<h3>Premium Headphones</h3>
+<p>High-quality sound with noise cancellation.</p>
+<button onclick="affiliateClick()">View Deal</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/400x250" alt="">
+<h3>Smart Watch</h3>
+<p>Track fitness, health and productivity.</p>
+<button onclick="affiliateClick()">View Deal</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/400x250" alt="">
+<h3>Gaming Setup</h3>
+<p>Top-rated gear for serious gamers.</p>
+<button onclick="affiliateClick()">View Deal</button>
+</div>
+
+</div>
+</section>
+
+<section class="testimonials" id="reviews">
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="grid">
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>"Found amazing discounts through VortexFrame!"</p>
+<br>
+<b>- Sarah</b>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>"Clean website and trustworthy recommendations."</p>
+<br>
+<b>- James</b>
+</div>
+
+<div class="testimonial">
+⭐⭐⭐⭐⭐
+<p>"Saved both time and money shopping online."</p>
+<br>
+<b>- David</b>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 VortexFrame. All Rights Reserved.</p>
+</footer>
+
+<script>
+function affiliateClick(){
+    alert("Redirecting to affiliate offer...");
+    // Replace with affiliate URL
+    window.location.href = "https://your-affiliate-link.com";
+}
+
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))
+        .scrollIntoView({
+            behavior:'smooth'
+        });
+    });
+});
+</script>
+
+</body>
+</html>
